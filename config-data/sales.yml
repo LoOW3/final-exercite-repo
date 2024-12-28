@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: sales
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+  datasource:
+    url: jdbc:mysql://localhost:3306/sales?serverTimezone=UTC
+    username: ${DB_USER}
+    password: ${DB_PASSWD}
+  cloud:
+    config:
+      enabled: false
+
+server:
+  port: 3700
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:3333/eureka
+
