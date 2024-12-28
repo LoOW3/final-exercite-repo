@@ -9,10 +9,8 @@ spring:
           lower-case-service-id: true
     config:
       enabled: false
-
 server:
   port: 8080
-
 eureka:
   client:
     service-url:
